@@ -1,0 +1,26 @@
+<!DOCTYPE hmtl>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8">
+		<title>Fórmulas Matemáticas</title>
+	</head>
+	<body>
+	<img src="img/baskara.png">
+		<input type="text" id="num_01" placeholder="Insira o primeiro número"></input><br>
+		<input type="text" id="num_02" placeholder="Insira o segundo número"></input><br>
+		<input type="text" id="num_03" placeholder="Insira o terceiro número"></input><br>
+		<button id="Calcular" onclick="Somar()">Calcular</button>
+		<script>
+			function Somar()
+			{
+				num01 = document.getElementById("num_01").value;
+				num02 = document.getElementById("num_02").value;
+				num03 = document.getElementById("num_03").value;
+				
+				console.log(parseInt(num01) + parseInt(num02) + parseInt(num03));
+			}
+			
+		</script>
+	</body>
+</html>		
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head lang="pt-BR">
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>Equação Quadrática (Báskara)</title>
+		
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		
+	</head>
+	<body>
+		<div class="container">
+			
+			<section id="Header">
+				<nav class="navbar navbar-default" role="navigation">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="#">Título</a>
+						</div>
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<li><a href="#">Equação Quadrática (Báskara)</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</section>
+			
+			<section id="Mensagens">
+				<!-- Mensagem de erro -->
+				<div class="alert alert-danger hidden" role="alert" id="msgErro">
+					<p><span id="descricao_erro"></span></p>
+				</div>
+				<div class="alert alert-warning hidden" role="alert" id="msgErro">
+					<p><span id="descricao_warning"></span></p>
+				</div>
+			</section>
+			
+			<section id="Corpo_do_Calculo">
+				
+				<div class="row">
+					<div class="col-md-12">
+						<h1><span>Equação Quadrática - Báskara</span></h2>
+					</div>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-md-3">
+						<label>Valor de a, <span class="condicional">a &ne; 0</span></label>
+						<br>
+						<input type="text" id="value_a"></input>
+					</div>
+					<div class="col-md-3">
+						<label>Valor de b</label>
+						<br>
+						<input type="text" id="value_b"></input>
+					</div>
+					<div class="col-md-3">
+						<label>Valor de c</label>
+						<br>
+						<input type="text" id="value_c"></input>
+					</div>
+					<div class="col-md-3">
+						<br>
+						<button text="Calcular" type="button" id="Calcular" onclick="Baskara()">Calcular</button>
+					</div>
+				</div>
+				
+			</section>
+			<hr>
+			<section id="Resultado_do_Calculo">
+								<div class="alert alert-success" role="alert" id="msgErro">
+					<p><span id="resultado">Resultado:</span></p>
+				</div>
+			</section>
+			<hr>
+			<section id="Footer"></section>
+			
+		</div>
+		
+		<script src="js/baskara.js"></script>
+		
+	</body>
+</html>

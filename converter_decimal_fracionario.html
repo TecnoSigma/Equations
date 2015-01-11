@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head lang="pt-BR">
+		<meta charset="UTF-8">
+		<title>Coversão para Fracionários</title>
+	</head>
+	<body>
+		<input type="text" id="numero"></input>
+		<button type="button" onclick="CoverterFracao()">Converter para fracionários</button>
+		<br>
+		<br>
+		<div>
+			<span id="resultado"></span>
+		</div>
+		
+		<script>
+			function CoverterFracao()
+			{
+				/*CONVERSÃO DE NÚMEROS DECIMAIS PARA FRACIONÁRIOS*/
+				
+				var x = document.getElementById("numero").value;
+				res_num = 0;
+				res_den = 0;
+				num = 0;	
+				den = 10;
+				res = 0;
+				
+				if(x.search(",") != (-1))
+				{
+					
+					x = x.replace(",","").to;
+					
+					num = parseInt(x);
+					
+					if(num % 2 == 0)
+					{
+						res_num = num / 2;
+						res_den = den / 2;
+					}
+					
+					if(num % 5 == 0)
+					{
+						res_num = num / 5;
+						res_den = den / 5;
+					}
+					
+					if((res_num == 0) && (res_den == 0))
+					{
+						res =  String(num) + "/" + String(den);
+					}
+					else
+					{
+						res =  String(res_num) + "/" + String(res_den);
+					}
+				}
+				else
+				{
+					res = x;
+				}
+				
+				document.getElementById("resultado").innerHTML = res;
+			}
+		</script>
+	</body>
+</html>

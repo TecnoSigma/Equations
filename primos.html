@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head lang="pt-BR">
+		<meta charset="UTF-8">
+		<title>Números Primos</title>
+	</head>
+	<body>
+		<input type="text" id="numero"></input>
+		<button type="button" onclick="ValidarPrimo()">Verificar número</button>
+		<br>
+		<br>
+		<div>
+			<span id="resultado"></span>
+		</div>
+		
+		<script>
+			function ValidarPrimo()
+			{
+				/*VALIDAÇÃO DE NÚMEROS PRIMOS*/
+				
+				var x = parseInt(document.getElementById("numero").value);
+				lim = 0;
+				negativo = false;
+				pr = [];
+				primo = false;
+				
+				if(x != 0)
+				{
+					if(x < 0)
+					{
+						x = x * (-1); /*obtém valor absoluto*/
+						
+						negativo = true;
+					}
+					
+					if(x == 2)
+					{
+						primo = true;
+					}
+					else
+					{
+						if(x % 2 != 0)
+						{
+							lim = (x + 1) / 2; /*cria limite auxiliar para cálculo*/
+						}
+						
+						for(i = 1 ; i <= lim ; i++)
+						{
+							if(x % i == 0)
+							{
+								pr.push(i); /*adiciona itens ao array*/
+							}
+						}
+						
+						pr.push(x);
+						
+						if(pr.length == 2) /*valida primo*/
+						{
+							if(pr.indexOf(1) != (-1))
+							{
+								if(pr.indexOf(x) != (-1))
+								{
+									primo = true;
+								}
+							}
+						}
+					}
+					
+					if(negativo)
+					{
+						x = x * (-1);
+					}
+					
+					if(primo)
+					{
+						res =  "O número " + x + " é primo!";
+					}
+					else
+					{
+						res =  "O número " + x + " não é primo!";
+					}
+				}
+				else
+				{
+					alert("Erro!");
+				}
+				
+				document.getElementById("resultado").innerHTML = res;
+			}
+		</script>
+	</body>
+</html>
