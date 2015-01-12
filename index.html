@@ -1,26 +1,72 @@
-<!DOCTYPE hmtl>
-<html lang="pt-BR">
-	<head>
+<!DOCTYPE html>
+<html>
+	<head lang="pt-BR">
 		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
 		<title>Fórmulas Matemáticas</title>
+		
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		
 	</head>
 	<body>
-	<img src="img/baskara.png">
-		<input type="text" id="num_01" placeholder="Insira o primeiro número"></input><br>
-		<input type="text" id="num_02" placeholder="Insira o segundo número"></input><br>
-		<input type="text" id="num_03" placeholder="Insira o terceiro número"></input><br>
-		<button id="Calcular" onclick="Somar()">Calcular</button>
-		<script>
-			function Somar()
-			{
-				num01 = document.getElementById("num_01").value;
-				num02 = document.getElementById("num_02").value;
-				num03 = document.getElementById("num_03").value;
-				
-				console.log(parseInt(num01) + parseInt(num02) + parseInt(num03));
-			}
+		<div class="container">
 			
-		</script>
+			<section id="Header">
+				<nav class="navbar navbar-default" role="navigation">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="#">Fórmulas Matemáticas</a>
+						</div>
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav">
+								<li><a href="#"><small>Conjuntos Numéricos</small></a></li>
+								<li><a href="#"><small>Álgebra</small></a></li>
+								<li><a href="#"><small>Geometria</small></a></li>
+								<li><a href="#"><small>Trigonometria</small></a></li>
+								<li><a href="#"><small>Matrizes e Determinantes</small></a></li>
+								<li><a href="#"><small>Vetores</small></a></li>
+								<li><a href="#"><small>Análise Geométrica</small></a></li>
+								<li><a href="#"><small>Cálculo Diferencial</small></a></li>
+								<li><a href="#"><small>Cálculo Integral</small></a></li>
+								<li><a href="#"><small>Equações Diferenciais</small></a></li>
+								<li><a href="#"><small>Séries</small></a></li>
+								<li><a href="#"><small>Probabilidade</small></a></li>
+							</ul>
+							</div>
+							</div>
+							</nav>
+					</section>
+					
+					<section id="Mensagens">
+						<!-- Mensagem de erro -->
+						<div class="alert alert-danger hidden" role="alert" id="msgErro">
+							<p><span id="descricao_erro"></span></p>
+						</div>
+						<div class="alert alert-warning hidden" role="alert" id="msgErro">
+							<p><span id="descricao_warning"></span></p>
+						</div>
+					</section>
+					
+					<section id="Corpo_do_Calculo">
+					</section>
+					<hr>
+					<section id="Resultado_do_Calculo">
+						<div class="alert alert-success" role="alert" id="msgErro">
+							<p><span id="resultado">Resultado:</span></p>
+						</div>
+					</section>
+					<hr>
+					<section id="Footer"></section>
+					
+		</div>		
 	</body>
-</html>		
-
+</html>
