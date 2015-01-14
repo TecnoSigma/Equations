@@ -13,7 +13,7 @@
 	</head>
 	<body>
 		<div class="container">
-			
+			<br>
 			<section id="Header">
 				<nav class="navbar navbar-default" role="navigation">
 					<div class="container-fluid">
@@ -25,48 +25,81 @@
 								<span class="icon-bar"></span>
 							</button>
 							<a class="navbar-brand" href="#">Fórmulas Matemáticas</a>
-						</div>
-						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-							<ul class="nav navbar-nav">
-								<li><a href="#"><small>Conjuntos Numéricos</small></a></li>
-								<li><a href="#"><small>Álgebra</small></a></li>
-								<li><a href="#"><small>Geometria</small></a></li>
-								<li><a href="#"><small>Trigonometria</small></a></li>
-								<li><a href="#"><small>Matrizes e Determinantes</small></a></li>
-								<li><a href="#"><small>Vetores</small></a></li>
-								<li><a href="#"><small>Análise Geométrica</small></a></li>
-								<li><a href="#"><small>Cálculo Diferencial</small></a></li>
-								<li><a href="#"><small>Cálculo Integral</small></a></li>
-								<li><a href="#"><small>Equações Diferenciais</small></a></li>
-								<li><a href="#"><small>Séries</small></a></li>
-								<li><a href="#"><small>Probabilidade</small></a></li>
+						</div>						
+						<div id="menu">
+							<ul>
+								<li><a href="#">Números<br>Primitivos</a></li>
+								<li><a href="#">Conjuntos<br>Numéricos</a></li>
+								<li><a href="#">Álgebra<br>&nbsp;</a></li>
+								<li><a href="#">Geometria<br>&nbsp;</a></li>
+								<li><a href="#">Trigonometria<br>&nbsp;</a></li>
+								<li><a href="#">Matrizes e<br>Determinantes</a></li>
+								<li><a href="#">Vetores<br>&nbsp;</a></li>
+								<li><a href="#">Análise<br>Geométrica</a></li>
+								<li><a href="#">Cálculo<br>Diferencial</a></li>
+								<li><a href="#">Cálculo<br>Integral</a></li>
+								<li><a href="#">Equações<br>Diferenciais</a></li>
+								<li><a href="#">Séries<br>&nbsp;</a></li>
+								<li><a href="#">Probabilidade<br>&nbsp;</a></li>
 							</ul>
+						</div>
+					</div>
+					<br>
+				</nav>
+			</section>
+			
+			<section id="Mensagens">
+				<!-- Mensagem de erro -->
+				<div class="alert alert-danger hidden" role="alert" id="msgErro">
+					<p><span id="descricao_erro"></span></p>
+				</div>
+				<div class="alert alert-warning hidden" role="alert" id="msgErro">
+					<p><span id="descricao_warning"></span></p>
+				</div>
+			</section>
+			
+			<section id="Corpo_do_Calculo">
+				<div class="row">
+					<div class="col-md-12">
+						<ul class="nav nav-tabs" id="tabs_kars">
+							<li class="active"><a href="#dados_anunciante">Dados Anuncianente</a></li>
+							<li><a href="#detalhes_tecnicos">Detalhes Tecnicos</a></li>
+							<li><a href="#detalhes_financiamento">Detalhes Financiamento</a></li>
+						</ul>
+						<div class="tab-content">
+							<div    id="dados_anunciante" class="tab-pane fade in active">
+								<h3>Dados do Anunciante</h3>
+								<p>dafd fadsf dfafd fadfd afafd adsf dfa dfa fdsf adf adf adf dsafd fasdf asdf dsaf dsfad daf ds</p>
+							</div> 
+							<div id="detalhes_tecnicos" class="tab-pane fade">
+								<h3>Detalhes Tecnicos</h3>
+								<p>dafd fadsf dfafd fadfd afafd adsf dfa dfa fdsf adf adf adf dsafd fasdf asdf dsaf dsfad daf ds</p>
 							</div>
+							<div id="detalhes_financiamento" class="tab-pane fade">
+								<h3>Detalhes do Financiamento</h3>
+								<p>dafd fadsf dfafd fadfd afafd adsf dfa dfa fdsf adf adf adf dsafd fasdf asdf dsaf dsfad daf ds</p>
 							</div>
-							</nav>
-					</section>
-					
-					<section id="Mensagens">
-						<!-- Mensagem de erro -->
-						<div class="alert alert-danger hidden" role="alert" id="msgErro">
-							<p><span id="descricao_erro"></span></p>
-						</div>
-						<div class="alert alert-warning hidden" role="alert" id="msgErro">
-							<p><span id="descricao_warning"></span></p>
 						</div>
 					</section>
-					
-					<section id="Corpo_do_Calculo">
-					</section>
-					<hr>
-					<section id="Resultado_do_Calculo">
-						<div class="alert alert-success" role="alert" id="msgErro">
-							<p><span id="resultado">Resultado:</span></p>
-						</div>
-					</section>
-					<hr>
-					<section id="Footer"></section>
-					
-		</div>		
+				</div>
+			</div>
+			<hr>
+			<section id="Resultado_do_Calculo">
+				<div class="alert alert-success" role="alert" id="msgErro">
+					<!-- <p><span id="resultado">Resultado:</span></p> -->
+				</div>
+			</section>
+			<hr>
+			<section id="Footer"></section>
+			
+			</div>	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="javascript/bootstrap.min.js"></script>
+		<script>
+			$('#tabs_kars a').click(function (e) {
+				e.preventDefault()
+				$(this).tab('show')
+			})
+		</script>
 	</body>
-</html>
+</html>				
