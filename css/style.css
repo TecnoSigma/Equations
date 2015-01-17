@@ -1,6 +1,7 @@
 body
 {
-	}
+	overflow: scroll;
+}
 
 #menu{
 	float:left;
@@ -32,29 +33,34 @@ body
 #menu li ul 
 {
 	display: none;
-	}
-	
+}
+
 #menu ul li a:hover
 {
 	background: #066;
 	color: #fff;
+}
+
+#menu li:hover ul{
+	display:block;
+	position:relative;
+}
+
+#menu li:hover li{
+	float: none;
+	font-size: 12px;
+}
+
+#menu li:hover a {
+	background: #333;
+}
+
+#menu li:hover li a:hover
+{
+	background: #222;
+}
+
+.invisible-accordion
+{
+	display: none;
 	}
-	
-	#menu li:hover ul{
-		display:block;
-		position:relative;
-		}
-		
-		#menu li:hover li{
-			float: none;
-			font-size: 12px;
-			}
-			
-			#menu li:hover a {
-				background: #333;
-				}
-				
-				#menu li:hover li a:hover
-				{
-					background: #222;
-					}

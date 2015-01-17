@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
 	<head lang="pt-BR">
+		
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
 		<title>Fórmulas Matemáticas</title>
 		
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/jquery-ui.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		
+		<script type="text/javascript" src="javascript/jquery-1.11.2.js"></script>
+		<script type="text/javascript" src="javascript/jquery-ui.js"></script>
 		
 	</head>
 	<body>
@@ -28,19 +33,18 @@
 						</div>						
 						<div id="menu">
 							<ul>
-								<li><a href="#">Números<br>Primitivos</a></li>
-								<li><a href="#">Conjuntos<br>Numéricos</a></li>
-								<li><a href="#">Álgebra<br>&nbsp;</a></li>
-								<li><a href="#">Geometria<br>&nbsp;</a></li>
-								<li><a href="#">Trigonometria<br>&nbsp;</a></li>
-								<li><a href="#">Matrizes e<br>Determinantes</a></li>
-								<li><a href="#">Vetores<br>&nbsp;</a></li>
-								<li><a href="#">Análise<br>Geométrica</a></li>
-								<li><a href="#">Cálculo<br>Diferencial</a></li>
-								<li><a href="#">Cálculo<br>Integral</a></li>
-								<li><a href="#">Equações<br>Diferenciais</a></li>
-								<li><a href="#">Séries<br>&nbsp;</a></li>
-								<li><a href="#">Probabilidade<br>&nbsp;</a></li>
+								<li><a href="#" onclick="visualiza_accordion(Conjuntos_Numericos);">Conjuntos<br>Numéricos</a></li>
+								<li><a href="#" onclick="visualiza_accordion(Algebra);">Álgebra<br>&nbsp;</a></li>
+								<li><a href="#" onclick="visualiza_accordion(Geometria);">Geometria<br>&nbsp;</a></li>
+								<li><a href="#" onclick="visualiza_accordion(Trigonometria);">Trigonometria<br>&nbsp;</a></li>
+								<li><a href="#" onclick="visualiza_accordion(Matrizes_Determinantes);">Matrizes e<br>Determinantes</a></li>
+								<li><a href="#" onclick="visualiza_accordion(Vetores);">Vetores<br>&nbsp;</a></li>
+								<li><a href="#" onclick="visualiza_accordion(Geometria_Analitica);">Geométrica<br>Analítica</a></li>
+								<li><a href="#" onclick="visualiza_accordion(Calculo_Diferencial);">Cálculo<br>Diferencial</a></li>
+								<li><a href="#" onclick="visualiza_accordion(Calculo_Integral);">Cálculo<br>Integral</a></li>
+								<li><a href="#" onclick="visualiza_accordion(Equacoes_Diferenciais);">Equações<br>Diferenciais</a></li>
+								<li><a href="#" onclick="visualiza_accordion(Series);">Séries<br>&nbsp;</a></li>
+								<li><a href="#" onclick="visualiza_accordion(Probabilidade);">Probabilidade<br>&nbsp;</a></li>
 							</ul>
 						</div>
 					</div>
@@ -58,32 +62,316 @@
 				</div>
 			</section>
 			
-			<section id="Corpo_do_Calculo">
-				<div class="row">
-					<div class="col-md-12">
-						<ul class="nav nav-tabs" id="tabs_kars">
-							<li class="active"><a href="#dados_anunciante">Dados Anuncianente</a></li>
-							<li><a href="#detalhes_tecnicos">Detalhes Tecnicos</a></li>
-							<li><a href="#detalhes_financiamento">Detalhes Financiamento</a></li>
-						</ul>
-						<div class="tab-content">
-							<div    id="dados_anunciante" class="tab-pane fade in active">
-								<h3>Dados do Anunciante</h3>
-								<p>dafd fadsf dfafd fadfd afafd adsf dfa dfa fdsf adf adf adf dsafd fasdf asdf dsaf dsfad daf ds</p>
-							</div> 
-							<div id="detalhes_tecnicos" class="tab-pane fade">
-								<h3>Detalhes Tecnicos</h3>
-								<p>dafd fadsf dfafd fadfd afafd adsf dfa dfa fdsf adf adf adf dsafd fasdf asdf dsaf dsfad daf ds</p>
-							</div>
-							<div id="detalhes_financiamento" class="tab-pane fade">
-								<h3>Detalhes do Financiamento</h3>
-								<p>dafd fadsf dfafd fadfd afafd adsf dfa dfa fdsf adf adf adf dsafd fasdf asdf dsaf dsfad daf ds</p>
-							</div>
-						</div>
-					</section>
-				</div>
+			<div id="Conjuntos_Numericos" class="invisible-accordion">
+				<h1>Identidades</h1>
+				<div></div>
+				<h1>Conjuntos Numéricos</h1>
+				<div></div>
+				<h1>Identidades Básicas</h1>
+				<div></div>
+				<h1>Números Complexos</h1>
+				<div></div>
 			</div>
+			
+			<div id="Algebra" class="invisible-accordion">
+				<h1>Fatoração</h1>
+				<div></div>
+				<h1>Produtos</h1>
+				<div></div>
+				<h1>Potenciação</h1>
+				<div></div>
+				<h1>Raízes</h1>
+				<div></div>
+				<h1>Logaritmos</h1>
+				<div></div>
+				<h1>Equações</h1>
+				<div></div>
+				<h1>Inequações</h1>
+				<div></div>
+				<h1>Juros Compostos</h1>
+				<div></div>
+			</div>
+			
+			<div id="Geometria" class="invisible-accordion">
+				<h1>Triângulo Reto</h1>
+				<div></div>
+				<h1>Triângulo Isósceles</h1>
+				<div></div>
+				<h1>Tiângulo Equilátero</h1>
+				<div></div>
+				<h1>Triângulo Escaleno</h1>
+				<div></div>
+				<h1>Quadrado</h1>
+				<div></div>
+				<h1>Retângulo</h1>
+				<div></div>
+				<h1>Paralelogramo</h1>
+				<div></div>
+				<h1>Losango</h1>
+				<div></div>
+				<h1>Trapézio</h1>
+				<div></div>
+				<h1>Trapézio Isósceles</h1>
+				<div></div>
+				<h1>Trapézio Isósceles Circunscrito a um Círculo</h1>
+				<div></div>
+				<h1>Trapézio Circunscrito a um Círculo</h1>
+				<div></div>
+				<h1>Losango</h1>
+				<div></div>
+				<h1>Quadrilátero Cíclico</h1>
+				<div></div>
+				<h1>Quadrilátero Tangencial</h1>
+				<div></div>
+				<h1>Quadrilátero Gerais</h1>
+				<div></div>
+				<h1>Hexágono Regular</h1>
+				<div></div>
+				<h1>Polígono Regular</h1>
+				<div></div>
+				<h1>Círculo</h1>
+				<div></div>
+				<h1>Seção de um Círculo</h1>
+				<div></div>
+				<h1>Segmento de um Círculo</h1>
+				<div></div>
+				<h1>Cubo</h1>
+				<div></div>
+				<h1>Paralelepípedo Retangular</h1>
+				<div></div>
+				<h1>Prisma</h1>
+				<div></div>
+				<h1>Tetraedro Regular</h1>
+				<div></div>
+				<h1>Pirâmide Regular</h1>
+				<div></div>
+				<h1>Tronco de uma Pirâmide Regular</h1>
+				<div></div>
+				<h1>Cunha Retangular Reta</h1>
+				<div></div>
+				<h1>Sólidos Platônicos</h1>
+				<div></div>
+				<h1>Cilindro Circular Reto</h1>
+				<div></div>
+				<h1>Cilindro Circular Reto com um Face Plano Oblíquo</h1>
+				<div></div>
+				<h1>Cone Circular Reto</h1>
+				<div></div>
+				<h1>Frustum de um direito Circular Cone</h1>
+				<div></div>
+				<h1>esfera</h1>
+				<div></div>
+				<h1>Cap Spherical</h1>
+				<div></div>
+				<h1>Sector Spherical</h1>
+				<div></div>
+				<h1>Segmento esférica</h1>
+				<div></div>
+				<h1>Wedge Spherical</h1>
+				<div></div>
+				<h1>Ellipsoid</h1>
+				<div></div>
+				<h1>Circular Torus</h1>
+				<div></div>
+			</div>
+			
+			<div id="Trigonometria" class="invisible-accordion">
+				<h1>Radian Grau e Medidas de Angles</h1>
+				<div></div>
+				<h1>Definições e Gráficos de Funções Trigonométricas</h1>
+				<div></div>
+				<h1>Sinais de Funções Trigonométricas</h1>
+				<div></div>
+				<h1>Funções Trigonométricas Ângulos Comuns</h1>
+				<div></div>
+				<h1>Fórmulas Mais Importantes</h1>
+				<div></div>
+				<h1>Fórmulas de Redução</h1>
+				<div></div>
+				<h1>A Periodicidade das Funções Trigonométricas</h1>
+				<div></div>
+				<h1>As Relações entre Funções Trigonométricas</h1>
+				<div></div>
+				<h1>Fórmulas de Adição e Subtração</h1>
+				<div></div>
+				<h1>Fórmulas de Ângulos Duplos</h1>
+				<div></div>
+				<h1>Fórmulas Ângulos Múltiplos</h1>
+				<div></div>
+				<h1>Fórmulas Semi-Ângulos</h1>
+				<div></div>
+				<h1>Identidades de Tangente de Semi-Ângulos</h1>
+				<div></div>
+				<h1>Transformações das Expressões Trigonométricas para Multiplicação</h1>
+				<div></div>
+				<h1>Transformações das Expressões Trigonométricas para Soma</h1>
+				<div></div>
+				<h1>Potenciação de Funções Trigonométricas</h1>
+				<div></div>
+				<h1>Gráficos de Funções Trigonométricas Inversas</h1>
+				<div></div>
+				<h1>Valores Destacados de Funções Trigonométricas Inversas</h1>
+				<div></div>
+				<h1>Relações entre Funções Trigonométricas Inversas</h1>
+				<div></div>
+				<h1>Equações Trigonométricas</h1>
+				<div></div>
+				<h1>Relações com Funções Hiperbólicas</h1>
+				<div></div>
+			</div>
+			
+			<div id="Matrizes_Determinantes" class="invisible-accordion">
+				<h1>Determinantes</h1>
+				<div></div>
+				<h1>Propriedades dos Determinantes</h1>
+				<div></div>
+				<h1>Matrizes</h1>
+				<div></div>
+				<h1>Operações com Matrizes</h1>
+				<div></div>
+				<h1>Sistemas de Equações Lineares</h1>
+				<div></div>
+			</div>
+			
+			<div id="Vetores" class="invisible-accordion">
+				<h1>Vetor Coordenadas</h1>
+				<div></div>
+				<h1>Vetor Adição</h1>
+				<div></div>
+				<h1>Vetor Subtração</h1>
+				<div></div>
+				<h1>Dimensionamento de Vetores</h1>
+				<div></div>
+				<h1>Produto Escalar</h1>
+				<div></div>
+				<h1>Produto Vetor</h1>
+				<div></div>
+				<h1>Produto Triplo</h1>
+				<div></div>
+			</div>
+			
+			<div id="Geometria_Analitica" class="invisible-accordion">
+				<h1>Sistema de Coordenadas - Uma Dimensão</h1>
+				<div></div>
+				<h1>Sistema de Coordenadas - Duas Dimensões</h1>
+				<div></div>
+				<h1>Linha Reta em Plane</h1>
+				<div></div>
+				<h1>Círculo</h1>
+				<div></div>
+				<h1>Elipse</h1>
+				<div></div>
+				<h1>Hipérbole</h1>
+				<div></div>
+				<h1>Parábola</h1>
+				<div></div>
+				<h1>Sistema de Coordenadas - Três Dimnesões</h1>
+				<div></div>
+				<h1>Plano</h1>
+				<div></div>
+				<h1>Linha Reta no Espaço</h1>
+				<div></div>
+				<h1>Superfícies Quadráticas</h1>
+				<div></div>
+				<h1>Esfera</h1>
+				<div></div>
+			</div>
+			
+			<div id="Calculo_Diferencial" class="invisible-accordion">
+				<h1>Funções e seus Gráficos</h1>
+				<div></div>
+				<h1>Limites de Funções</h1>
+				<div></div>
+				<h1>Definição e Propriedades do Derivado</h1>
+				<div></div>
+				<h1>Tabela de Derivados</h1>
+				<div></div>
+				<h1>Aplicações de Derivados</h1>
+				<div></div>
+				<h1>Diferencial</h1>
+				<div></div>
+				<h1>Funções Multivariáveis</h1>
+				<div></div>
+				<h1>Operações Diferenciais</h1>
+				<div></div>
+			</div>
+			
+			<div id="Calculo_Integral" class="invisible-accordion">
+				<h1>Integral Indefinida</h1>
+				<div></div>
+				<h1>Integrais de Funções Racionais</h1>
+				<div></div>
+				<h1>Integrais de Funções Irrational</h1>
+				<div></div>
+				<h1>Integrais de Funções Trigonométricas</h1>
+				<div></div>
+				<h1>Integrais de Funções Hiperbólicas</h1>
+				<div></div>
+				<h1>Integrais de Exponencial e Funções Logarítmicas</h1>
+				<div></div>
+				<h1>Fórmulas de Redução</h1>
+				<div></div>
+				<h1>Integral Definitiva</h1>
+				<div></div>
+				<h1>Integral Imprópria</h1>
+				<div></div>
+				<h1>Integral Dupla</h1>
+				<div></div>
+				<h1>Integral Tripla</h1>
+				<div></div>
+				<h1>Integral em Linha</h1>
+				<div></div>
+				<h1>Superfície Integral</h1>
+				<div></div>
+			</div>
+			
+			<div id="Equacoes_Diferenciais" class="invisible-accordion">
+				<h1>Equações Diferenciais Ordinárias de Primeira Ordem</h1>
+				<div></div>
+				<h1>Equações Diferenciais Ordinárias de Segunda Ordem</h1>
+				<div></div>
+				<h1>Algumas Equações Diferenciais Parciais</h1>
+				<div></div>
+			</div>
+			
+			<div id="Series" class="invisible-accordion">
+				<h1>Séries Aritmétricas</h1>
+				<div></div>
+				<h1>Séries Geométricas</h1>
+				<div></div>
+				<h1>Séries Finitas</h1>
+				<div></div>
+				<h1>Séries Infinitas</h1>
+				<div></div>
+				<h1>Propriedades de Convergente Series</h1>
+				<div></div>
+				<h1>Testes de Convergência</h1>
+				<div></div>
+				<h1>Alterating Series</h1>
+				<div></div>
+				<h1>Séries em Potenciação</h1>
+				<div></div>
+				<h1>Diferenciação e Integração de Séries de Potências</h1>
+				<div></div>
+				<h1>Séries de Taylor e Maclaurin</h1>
+				<div></div>
+				<h1>Expansões série de potência para algumas funções</h1>
+				<div></div>
+				<h1>Séries Binomiais</h1>
+				<div></div>
+				<h1>Séries de Fourier</h1>
+				<div></div>
+			</div>
+			
+			<div id="Probabilidade" class="invisible-accordion">
+				<h1>Permutações e Combinações</h1>
+				<div></div>
+				<h1>Fórmulas de Probabilidades</h1>
+				<div></div>
+			</div>
+			
 			<hr>
+			
 			<section id="Resultado_do_Calculo">
 				<div class="alert alert-success" role="alert" id="msgErro">
 					<!-- <p><span id="resultado">Resultado:</span></p> -->
@@ -91,15 +379,61 @@
 			</section>
 			<hr>
 			<section id="Footer"></section>
-			
-			</div>	
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script src="javascript/bootstrap.min.js"></script>
+		</div>
 		<script>
-			$('#tabs_kars a').click(function (e) {
-				e.preventDefault()
-				$(this).tab('show')
-			})
+			function visualiza_accordion(acc){
+				$('#Conjuntos_Numericos').addClass("invisible-accordion");
+				$('#Algebra').addClass("invisible-accordion");
+				$('#Geometria').addClass("invisible-accordion");
+				$('#Trigonometria').addClass("invisible-accordion");
+				$('#Matrizes_Determinantes').addClass("invisible-accordion");
+				$('#Vetores').addClass("invisible-accordion");
+				$('#Geometria_Analitica').addClass("invisible-accordion");
+				$('#Calculo_Diferencial').addClass("invisible-accordion");
+				$('#Calculo_Integral').addClass("invisible-accordion");
+				$('#Equacoes_Diferenciais').addClass("invisible-accordion");
+				$('#Series').addClass("invisible-accordion");
+				$('#Probabilidade').addClass("invisible-accordion");
+				
+				$(acc).removeClass("invisible-accordion");
+			};
+			
+			$(document).ready(function(){
+				$('#Conjuntos_Numericos').accordion();
+			});
+			$(document).ready(function(){
+				$('#Algebra').accordion();
+			});
+			$(document).ready(function(){
+				$('#Geometria').accordion();
+			});			
+			$(document).ready(function(){
+				$('#Trigonometria').accordion();
+			});
+			$(document).ready(function(){
+				$('#Matrizes_Determinantes').accordion();
+			});
+			$(document).ready(function(){
+				$('#Vetores').accordion();
+			});
+			$(document).ready(function(){
+				$('#Geometria_Analitica').accordion();
+			});
+			$(document).ready(function(){
+				$('#Calculo_Diferencial').accordion();
+			});
+			$(document).ready(function(){
+				$('#Calculo_Integral').accordion();
+			});
+			$(document).ready(function(){
+				$('#Equacoes_Diferenciais').accordion();
+			});
+			$(document).ready(function(){
+				$('#Series').accordion();
+			});
+			$(document).ready(function(){
+				$('#Probabilidade').accordion();
+			});
 		</script>
 	</body>
-</html>				
+</html>											
