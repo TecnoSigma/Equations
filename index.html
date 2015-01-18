@@ -66,23 +66,28 @@
 				<h1>Conjuntos Identidade</h1>
 				<div>
 					<p>União de Conjuntos</p>
-					<img src="conjuntos/images/uniao_conjuntos.png" />
+					<img src="images/conjuntos/uniao_conjuntos.png" />
 					<br>
 					<br>
 					<p>Intersecção de Conjuntos</p>
-					<img src="conjuntos/images/interseccao_conjuntos.png" />
+					<img src="images/conjuntos/interseccao_conjuntos.png" />
 					<br>
 					<br>
-					<p>Conjunto A <small>(separe os elementos por vírgulas)</small></p>
+					<p>Subtração de Conjuntos</p>
+					<img src="images/conjuntos/subtracao_conjuntos.png" />
+					<br>
+					<br>
+					<p>Conjunto A <small>(insira os elementos separados por vírgulas)</small></p>
 					<textarea id="conjA"></textarea>
 					<br>
 					<br>
-					<p>Conjunto B <small>(separe os elementos por vírgulas)</small></p>
+					<p>Conjunto B <small>(insira os elementos separados por vírgulas)</small></p>
 					<textarea id="conjB"></textarea>
 					<br>
 					<br>
-					<button type="button" class="btn btn-default">Calcular União</button>&nbsp;	
+					<button type="button" class="btn btn-default" onclick="uniao_conjuntos()">Calcular União</button>&nbsp;	
 					<button type="button" class="btn btn-default">Calcular Intersecção</button>&nbsp;
+					<button type="button" class="btn btn-default">Calcular Subtração</button>&nbsp;
 					<br>
 					<br>
 					<section>
@@ -90,6 +95,8 @@
 							<!-- <p><span id="resultado">Resultado:</span></p> -->
 						</div>
 					</section>
+					<hr>
+					
 				</div>
 				<h1>Conjuntos Numéricos</h1>
 				<div></div>
@@ -406,7 +413,32 @@
 			<hr>
 			<section id="Footer"></section>
 		</div>
+		
 		<script>
+			
+			function uniao_conjuntos() {
+				var a = document.getElementById("conjA").value;
+					b = document.getElementById("conjB").value;
+				
+					c = a + "," + b;
+				
+					c = c.split(",");
+				
+				document.getElementById("Resultado_Conjuntos").innerHTML = "R = {" + c + "}";
+			}
+			
+			function interseccao_conjuntos() {
+				var a = document.getElementById("conjA").value.split(",");
+					b = document.getElementById("conjB").value.slpit(",");
+
+					for(i = 0; i < a.length; i++)
+					{
+						/* Implementar */
+					}
+				
+				document.getElementById("Resultado_Conjuntos").innerHTML = "R = {" + c + "}";
+			}
+			
 			function visualiza_accordion(acc){
 				$('#Conjuntos_Numericos').addClass("invisible-accordion");
 				$('#Algebra').addClass("invisible-accordion");
@@ -462,4 +494,4 @@
 			});
 		</script>
 	</body>
-</html>											
+</html>														
