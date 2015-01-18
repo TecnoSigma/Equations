@@ -63,8 +63,34 @@
 			</section>
 			
 			<div id="Conjuntos_Numericos" class="invisible-accordion">
-				<h1>Identidades</h1>
-				<div></div>
+				<h1>Conjuntos Identidade</h1>
+				<div>
+					<p>União de Conjuntos</p>
+					<img src="conjuntos/images/uniao_conjuntos.png" />
+					<br>
+					<br>
+					<p>Intersecção de Conjuntos</p>
+					<img src="conjuntos/images/interseccao_conjuntos.png" />
+					<br>
+					<br>
+					<p>Conjunto A <small>(separe os elementos por vírgulas)</small></p>
+					<textarea id="conjA"></textarea>
+					<br>
+					<br>
+					<p>Conjunto B <small>(separe os elementos por vírgulas)</small></p>
+					<textarea id="conjB"></textarea>
+					<br>
+					<br>
+					<button type="button" class="btn btn-default">Calcular União</button>&nbsp;	
+					<button type="button" class="btn btn-default">Calcular Intersecção</button>&nbsp;
+					<br>
+					<br>
+					<section>
+						<div class="alert alert-success" role="alert" id="Resultado_Conjuntos">
+							<!-- <p><span id="resultado">Resultado:</span></p> -->
+						</div>
+					</section>
+				</div>
 				<h1>Conjuntos Numéricos</h1>
 				<div></div>
 				<h1>Identidades Básicas</h1>
@@ -399,40 +425,40 @@
 			};
 			
 			$(document).ready(function(){
-				$('#Conjuntos_Numericos').accordion();
+				$('#Conjuntos_Numericos').accordion({heightStyle: "content"});
 			});
 			$(document).ready(function(){
-				$('#Algebra').accordion();
+				$('#Algebra').accordion({heightStyle: "content"});
 			});
 			$(document).ready(function(){
-				$('#Geometria').accordion();
+				$('#Geometria').accordion({heightStyle: "content"});
 			});			
 			$(document).ready(function(){
-				$('#Trigonometria').accordion();
+				$('#Trigonometria').accordion({heightStyle: "content"});
 			});
 			$(document).ready(function(){
-				$('#Matrizes_Determinantes').accordion();
+				$('#Matrizes_Determinantes').accordion({heightStyle: "content"});
 			});
 			$(document).ready(function(){
-				$('#Vetores').accordion();
+				$('#Vetores').accordion({heightStyle: "content"});
 			});
 			$(document).ready(function(){
-				$('#Geometria_Analitica').accordion();
+				$('#Geometria_Analitica').accordion({heightStyle: "content"});
 			});
 			$(document).ready(function(){
-				$('#Calculo_Diferencial').accordion();
+				$('#Calculo_Diferencial').accordion({heightStyle: "content"});
 			});
 			$(document).ready(function(){
-				$('#Calculo_Integral').accordion();
+				$('#Calculo_Integral').accordion({heightStyle: "content"});
 			});
 			$(document).ready(function(){
-				$('#Equacoes_Diferenciais').accordion();
+				$('#Equacoes_Diferenciais').accordion({heightStyle: "content"});
 			});
 			$(document).ready(function(){
-				$('#Series').accordion();
+				$('#Series').accordion({heightStyle: "content"});
 			});
 			$(document).ready(function(){
-				$('#Probabilidade').accordion();
+				$('#Probabilidade').accordion({heightStyle: "content"});
 			});
 		</script>
 	</body>

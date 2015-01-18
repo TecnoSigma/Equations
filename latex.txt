@@ -1,0 +1,62 @@
+Igualdade entre Conjuntos
+A = B,\ se\ A \subset B\ e \B \subset A
+
+Contido no Universo
+A \subset I
+
+Contido em si
+A \subset A
+
+Conjunto Vazio
+\emptyset \subset A
+
+União de Conjuntos
+C = A\cup B = \lbrace x|x\in A\ ou \ x\in B \rbrace
+
+Intersecção de Conjuntos
+C = A\cap B = \lbrace x|x\in A\ e \ x\in B \rbrace
+
+Comutatividade
+A \cup B = B \cup A
+A \cap B = B \cap A
+
+Associatividade
+A \cup (B \cup C) = (A \cup B) \cup C
+A \cap (B \cap C) = (A \cap B) \cap C
+
+Distributividade
+A \cup (B \cap C) = (A \cup B) \cap (A \cup C)
+A \cap (B \cup C) = (A \cap B) \cup (A \cap C)
+
+Idempotência
+A \cup A = A
+A \cap A = A
+
+Dominação
+A \cup I = I
+A \cap \emptyset = \emptyset
+
+Identificação
+A \cup \emptyset = A
+A \cap I = A
+
+Complemento
+A' = \lbrace x \in I | x \notin A \rbrace
+A \cup A' = I
+A \cap A' = \emptyset
+
+Lei de Morgan
+(A \cup B)' = A' \cap B'
+(A \cap B)' = A' \cup B'
+
+Subtração de Conjuntos
+C = B \setminus A = \lbrace x|x\in B\ e \ x\notin A \rbrace
+B \setminus A = B \setminus(A \cap B)
+B \setminus A = B \cap A'
+A \setminus A = \emptyset
+A \setminus B = A, se A \cap B = \emptyset
+(A \setminus B) \cap C = (A \cap C) \setminus (B \cap C)
+A' = I \setminus A
+
+Produto Catesiano
+C = A \times B = \lbrace (x,y) | x \in A\ e\ y \in B \rbrace
