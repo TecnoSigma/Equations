@@ -418,25 +418,30 @@
 			
 			function uniao_conjuntos() {
 				var a = document.getElementById("conjA").value;
-					b = document.getElementById("conjB").value;
+				b = document.getElementById("conjB").value;
 				
-					c = a + "," + b;
+				c = a + "," + b;
 				
-					c = c.split(",");
+				c = c.split(",");
 				
 				document.getElementById("Resultado_Conjuntos").innerHTML = "R = {" + c + "}";
 			}
 			
 			function interseccao_conjuntos() {
 				var a = document.getElementById("conjA").value.split(",");
-					b = document.getElementById("conjB").value.slpit(",");
-
-					for(i = 0; i < a.length; i++)
-					{
-						/* Implementar */
-					}
+				var	b = document.getElementById("conjB").value.split(",");
 				
-				document.getElementById("Resultado_Conjuntos").innerHTML = "R = {" + c + "}";
+				var	c = 0;
+				
+				for(i = 0; i < b.length; i++)
+				{
+					if (a.indexOf(b[i]) == -1)
+					{
+						a.push(b[i]);
+					}
+				}
+				
+				document.getElementById("Resultado_Conjuntos").innerHTML = "R = {" + a + "}";
 			}
 			
 			function visualiza_accordion(acc){
@@ -446,52 +451,52 @@
 				$('#Trigonometria').addClass("invisible-accordion");
 				$('#Matrizes_Determinantes').addClass("invisible-accordion");
 				$('#Vetores').addClass("invisible-accordion");
-				$('#Geometria_Analitica').addClass("invisible-accordion");
-				$('#Calculo_Diferencial').addClass("invisible-accordion");
-				$('#Calculo_Integral').addClass("invisible-accordion");
-				$('#Equacoes_Diferenciais').addClass("invisible-accordion");
-				$('#Series').addClass("invisible-accordion");
-				$('#Probabilidade').addClass("invisible-accordion");
-				
-				$(acc).removeClass("invisible-accordion");
+			$('#Geometria_Analitica').addClass("invisible-accordion");
+			$('#Calculo_Diferencial').addClass("invisible-accordion");
+			$('#Calculo_Integral').addClass("invisible-accordion");
+			$('#Equacoes_Diferenciais').addClass("invisible-accordion");
+			$('#Series').addClass("invisible-accordion");
+			$('#Probabilidade').addClass("invisible-accordion");
+			
+			$(acc).removeClass("invisible-accordion");
 			};
 			
 			$(document).ready(function(){
-				$('#Conjuntos_Numericos').accordion({heightStyle: "content"});
+			$('#Conjuntos_Numericos').accordion({heightStyle: "content"});
 			});
 			$(document).ready(function(){
-				$('#Algebra').accordion({heightStyle: "content"});
+			$('#Algebra').accordion({heightStyle: "content"});
 			});
 			$(document).ready(function(){
-				$('#Geometria').accordion({heightStyle: "content"});
+			$('#Geometria').accordion({heightStyle: "content"});
 			});			
 			$(document).ready(function(){
-				$('#Trigonometria').accordion({heightStyle: "content"});
+			$('#Trigonometria').accordion({heightStyle: "content"});
 			});
 			$(document).ready(function(){
-				$('#Matrizes_Determinantes').accordion({heightStyle: "content"});
+			$('#Matrizes_Determinantes').accordion({heightStyle: "content"});
 			});
 			$(document).ready(function(){
-				$('#Vetores').accordion({heightStyle: "content"});
+			$('#Vetores').accordion({heightStyle: "content"});
 			});
 			$(document).ready(function(){
-				$('#Geometria_Analitica').accordion({heightStyle: "content"});
+			$('#Geometria_Analitica').accordion({heightStyle: "content"});
 			});
 			$(document).ready(function(){
-				$('#Calculo_Diferencial').accordion({heightStyle: "content"});
+			$('#Calculo_Diferencial').accordion({heightStyle: "content"});
 			});
 			$(document).ready(function(){
-				$('#Calculo_Integral').accordion({heightStyle: "content"});
+			$('#Calculo_Integral').accordion({heightStyle: "content"});
 			});
 			$(document).ready(function(){
-				$('#Equacoes_Diferenciais').accordion({heightStyle: "content"});
+			$('#Equacoes_Diferenciais').accordion({heightStyle: "content"});
 			});
 			$(document).ready(function(){
-				$('#Series').accordion({heightStyle: "content"});
+			$('#Series').accordion({heightStyle: "content"});
 			});
 			$(document).ready(function(){
-				$('#Probabilidade').accordion({heightStyle: "content"});
+			$('#Probabilidade').accordion({heightStyle: "content"});
 			});
-		</script>
-	</body>
-</html>														
+			</script>
+			</body>
+			</html>																	
