@@ -50,7 +50,7 @@ Lei de Morgan
 (A \cap B)' = A' \cup B'
 
 Subtração de Conjuntos
-C = B \setminus A = \lbrace x|x\in B\ e \ x\notin A \rbrace
+C = A \setminus B = \lbrace x|x\in A\ e \ x\notin B \rbrace
 B \setminus A = B \setminus(A \cap B)
 B \setminus A = B \cap A'
 A \setminus A = \emptyset

@@ -65,38 +65,78 @@
 			<div id="Conjuntos_Numericos" class="invisible-accordion">
 				<h1>Conjuntos Identidade</h1>
 				<div>
-					<p>União de Conjuntos</p>
-					<img src="images/conjuntos/uniao_conjuntos.png" />
-					<br>
-					<br>
-					<p>Intersecção de Conjuntos</p>
-					<img src="images/conjuntos/interseccao_conjuntos.png" />
-					<br>
-					<br>
-					<p>Subtração de Conjuntos</p>
-					<img src="images/conjuntos/subtracao_conjuntos.png" />
-					<br>
-					<br>
-					<p>Conjunto A <small>(insira os elementos separados por vírgulas)</small></p>
-					<textarea id="conjA"></textarea>
-					<br>
-					<br>
-					<p>Conjunto B <small>(insira os elementos separados por vírgulas)</small></p>
-					<textarea id="conjB"></textarea>
-					<br>
-					<br>
-					<button type="button" class="btn btn-default" onclick="uniao_conjuntos()">Calcular União</button>&nbsp;	
-					<button type="button" class="btn btn-default">Calcular Intersecção</button>&nbsp;
-					<button type="button" class="btn btn-default">Calcular Subtração</button>&nbsp;
-					<br>
-					<br>
-					<section>
-						<div class="alert alert-success" role="alert" id="Resultado_Conjuntos">
-							<!-- <p><span id="resultado">Resultado:</span></p> -->
+					<div class="rows">
+						<div class="col-md-12 col-sm-12">
+							<p>União de Conjuntos</p>
+							<img src="images/conjuntos/uniao_conjuntos.png" class="img-responsive" />
+							<br>
 						</div>
-					</section>
-					<hr>
-					
+					</div>
+					<div class="rows">
+						<div class="col-md-12 col-sm-12">
+							<p>Intersecção de Conjuntos</p>
+							<img src="images/conjuntos/interseccao_conjuntos.png" class="img-responsive" />
+							<br>
+						</div>
+					</div>
+					<div class="rows">
+						<div class="col-md-4 col-sm-12">
+							<p>Subtração de Conjuntos</p>
+							<img src="images/conjuntos/subtracao_conjuntos_1.png" class="img-responsive" />
+						</div>
+						<div class="col-md-4 col-sm-12">
+							<p>&nbsp;</p>
+							<img src="images/conjuntos/subtracao_conjuntos_2.png" class="img-responsive" />
+						</div>
+						<div class="col-md-4 col-sm-12">
+							<p>&nbsp;</p>
+							<img src="images/conjuntos/subtracao_conjuntos_3.png" class="img-responsive" />
+						</div>
+					</div>
+					<div class="rows">
+						<div class="col-md-4 col-sm-12">
+							<p>&nbsp;</p>
+							<img src="images/conjuntos/subtracao_conjuntos_4.png" class="img-responsive" />
+						</div>
+						<div class="col-md-4 col-sm-12">
+							<p>&nbsp;</p>
+							<img src="images/conjuntos/subtracao_conjuntos_5.png" class="img-responsive" />
+						</div>
+						<div class="col-md-4 col-sm-12">
+							<p>&nbsp;</p>
+							<img src="images/conjuntos/subtracao_conjuntos_6.png" class="img-responsive" />
+						</div>
+					</div>
+					<div class="rows">
+						<div class="col-md-12 col-sm-12">
+							<p>&nbsp;</p>
+							<img src="images/conjuntos/subtracao_conjuntos_7.png" class="img-responsive" />
+						</div>
+					</div>
+					<br>
+					<div class="rows">
+						<div class="col-md-12 col-sm-12">
+						<p>&nbsp;</p>
+							<p>Conjunto A <small>(insira os elementos separados por vírgulas)</small></p>
+							<textarea id="conjA"></textarea>
+							<br>
+							<br>
+							<p>Conjunto B <small>(insira os elementos separados por vírgulas)</small></p>
+							<textarea id="conjB"></textarea>
+							<br>
+							<br>
+							<button type="button" class="btn btn-default" onclick="uniao_conjuntos()">Calcular União</button>&nbsp;	
+							<button type="button" class="btn btn-default" onclick="interseccao_conjuntos()">Calcular Intersecção</button>&nbsp;
+							<button type="button" class="btn btn-default" onclick="subtracao_conjuntos()">Calcular Subtração</button>&nbsp;
+							<br>
+							<br>
+							<section>
+								<div class="alert alert-success" role="alert" id="Resultado_Conjuntos">
+									<!-- <p><span id="resultado">Resultado:</span></p> -->
+								</div>
+							</section>
+						</div>
+					</div>
 				</div>
 				<h1>Conjuntos Numéricos</h1>
 				<div></div>
@@ -104,9 +144,9 @@
 				<div></div>
 				<h1>Números Complexos</h1>
 				<div></div>
-			</div>
-			
-			<div id="Algebra" class="invisible-accordion">
+				</div>
+				
+				<div id="Algebra" class="invisible-accordion">
 				<h1>Fatoração</h1>
 				<div></div>
 				<h1>Produtos</h1>
@@ -418,31 +458,62 @@
 			
 			function uniao_conjuntos() {
 				var a = document.getElementById("conjA").value;
-				b = document.getElementById("conjB").value;
+				var b = document.getElementById("conjB").value;
 				
 				c = a + "," + b;
 				
-				c = c.split(",");
+				res = c.split(",");
 				
-				document.getElementById("Resultado_Conjuntos").innerHTML = "R = {" + c + "}";
-			}
+				document.getElementById("Resultado_Conjuntos").innerHTML = "C = {" + res + "}";
+			};
 			
 			function interseccao_conjuntos() {
 				var a = document.getElementById("conjA").value.split(",");
 				var	b = document.getElementById("conjB").value.split(",");
 				
-				var	c = 0;
+				res = [];
 				
 				for(i = 0; i < b.length; i++)
 				{
-					if (a.indexOf(b[i]) == -1)
+					if (a.indexOf(b[i]) != -1)
 					{
-						a.push(b[i]);
+						res.push(b[i]);
 					}
 				}
 				
-				document.getElementById("Resultado_Conjuntos").innerHTML = "R = {" + a + "}";
-			}
+				if(res.length == 0)
+				{
+					document.getElementById("Resultado_Conjuntos").innerHTML = "C = &empty;";
+				}
+				else
+				{
+					document.getElementById("Resultado_Conjuntos").innerHTML = "C = {" + res + "}";
+				}			
+			};
+			
+			function subtracao_conjuntos() {
+				var a = document.getElementById("conjA").value.split(",");
+				var	b = document.getElementById("conjB").value.split(",");
+				
+				res = [];
+				
+				for(i = 0; i < a.length; i++)
+				{
+					if (b.indexOf(a[i]) == -1)
+					{
+						res.push(a[i]);
+					}
+				}
+				
+				if((a.length == 1) && (a[0] == ""))
+				{
+					document.getElementById("Resultado_Conjuntos").innerHTML = "C = &empty;";
+				}
+				else
+				{
+					document.getElementById("Resultado_Conjuntos").innerHTML = "C = {" + res + "}";
+				}			
+			};
 			
 			function visualiza_accordion(acc){
 				$('#Conjuntos_Numericos').addClass("invisible-accordion");
@@ -451,52 +522,52 @@
 				$('#Trigonometria').addClass("invisible-accordion");
 				$('#Matrizes_Determinantes').addClass("invisible-accordion");
 				$('#Vetores').addClass("invisible-accordion");
-			$('#Geometria_Analitica').addClass("invisible-accordion");
-			$('#Calculo_Diferencial').addClass("invisible-accordion");
-			$('#Calculo_Integral').addClass("invisible-accordion");
-			$('#Equacoes_Diferenciais').addClass("invisible-accordion");
-			$('#Series').addClass("invisible-accordion");
-			$('#Probabilidade').addClass("invisible-accordion");
-			
-			$(acc).removeClass("invisible-accordion");
+				$('#Geometria_Analitica').addClass("invisible-accordion");
+				$('#Calculo_Diferencial').addClass("invisible-accordion");
+				$('#Calculo_Integral').addClass("invisible-accordion");
+				$('#Equacoes_Diferenciais').addClass("invisible-accordion");
+				$('#Series').addClass("invisible-accordion");
+				$('#Probabilidade').addClass("invisible-accordion");
+				
+				$(acc).removeClass("invisible-accordion");
 			};
 			
 			$(document).ready(function(){
-			$('#Conjuntos_Numericos').accordion({heightStyle: "content"});
+				$('#Conjuntos_Numericos').accordion({heightStyle: "content"});
 			});
 			$(document).ready(function(){
-			$('#Algebra').accordion({heightStyle: "content"});
+				$('#Algebra').accordion({heightStyle: "content"});
 			});
 			$(document).ready(function(){
-			$('#Geometria').accordion({heightStyle: "content"});
+				$('#Geometria').accordion({heightStyle: "content"});
 			});			
 			$(document).ready(function(){
-			$('#Trigonometria').accordion({heightStyle: "content"});
+				$('#Trigonometria').accordion({heightStyle: "content"});
 			});
 			$(document).ready(function(){
-			$('#Matrizes_Determinantes').accordion({heightStyle: "content"});
+				$('#Matrizes_Determinantes').accordion({heightStyle: "content"});
 			});
 			$(document).ready(function(){
-			$('#Vetores').accordion({heightStyle: "content"});
+				$('#Vetores').accordion({heightStyle: "content"});
 			});
 			$(document).ready(function(){
-			$('#Geometria_Analitica').accordion({heightStyle: "content"});
+				$('#Geometria_Analitica').accordion({heightStyle: "content"});
 			});
 			$(document).ready(function(){
-			$('#Calculo_Diferencial').accordion({heightStyle: "content"});
+				$('#Calculo_Diferencial').accordion({heightStyle: "content"});
 			});
 			$(document).ready(function(){
-			$('#Calculo_Integral').accordion({heightStyle: "content"});
+				$('#Calculo_Integral').accordion({heightStyle: "content"});
 			});
 			$(document).ready(function(){
-			$('#Equacoes_Diferenciais').accordion({heightStyle: "content"});
+				$('#Equacoes_Diferenciais').accordion({heightStyle: "content"});
 			});
 			$(document).ready(function(){
-			$('#Series').accordion({heightStyle: "content"});
+				$('#Series').accordion({heightStyle: "content"});
 			});
 			$(document).ready(function(){
-			$('#Probabilidade').accordion({heightStyle: "content"});
+				$('#Probabilidade').accordion({heightStyle: "content"});
 			});
-			</script>
-			</body>
-			</html>																	
+		</script>
+	</body>
+</html>	
